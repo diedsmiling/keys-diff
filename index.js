@@ -17,8 +17,9 @@ function isObj(obj) {
  */
 function deepValue(obj, path) {
   let clonedObj = obj
-  path.forEach((val) => {
-    clonedObj = clonedObj ? clonedObj[val] : clonedObj
+  path.every((val) => {
+    clonedObj = clonedObj[val]
+    return !!clonedObj
   })
   return clonedObj
 }
