@@ -1,0 +1,32 @@
+{
+  "name": "keys-diff",
+  "version": "1.0.0",
+  "description": "Finds difference between the kyes of two objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diedsmiling/keys-diff.git"
+  },
+  "keywords": [
+    "objects",
+    "difference",
+    "keys"
+  ],
+  "author": "Lazarev Alexandr <diedsmiling@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diedsmiling/keys-diff/issues"
+  },
+  "homepage": "https://github.com/diedsmiling/keys-diff#readme",
+  "devDependencies": {
+    "babel-eslint": "^7.0.0",
+    "eslint": "^3.7.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0"
+  }
+}
