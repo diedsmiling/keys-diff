@@ -58,8 +58,8 @@ function keysDiff(firstObj, secondObj) {
     throw Error('Both arguments should be objects!')
   }
   return [
-    seekDiffs(firstObj, secondObj, [], [], true, []),
-    seekDiffs(secondObj, firstObj, [], [], true, []),
+    seekDiffs(firstObj, secondObj, [], []),
+    seekDiffs(secondObj, firstObj, [], []),
   ]
 }
 
