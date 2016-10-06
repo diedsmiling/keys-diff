@@ -1,3 +1,5 @@
+'use strict'
+
 /**
  * Checks if variable is an object
  *
