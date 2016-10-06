@@ -38,3 +38,39 @@ test('Should throw error if array is passed as argument', () => {
   assertError(['foo'], {})
   assertError({}, ['bar'])
 })
+
+test('Should return empty arrays on empty objects', (t) => {
+  t.deepEqual(keysDiff({}, {}), [[], []])
+})
+
+test('Should return empty arrays when objects keys are equal', (t) => {
+  t.deepEqual(keysDiff({ foo: 'bar' }, { foo: 'baz' }), [[], []])
+})
+
+test('Should return empty arrays when object keys are equal but their order is different', (t) => {
+  t.deepEqual(keysDiff({ foo: 'foo', bar: 'bar' }, { bar: 'bar', foo: 'foo' }), [[], []])
+})
+
+test('Should find difference in a plain object', (t) => {
+  t.deepEqual(keysDiff({ foo: 'foo' }, { bar: 'bar' }), [[['foo']], [['bar']]])
+})
+
+test('Should find difference in a nested object', (t) => {
+  t.deepEqual(
+    keysDiff(
+      {
+        foo: {
+          bar: 'bar',
+        },
+        baz: 'baz',
+        qux: 'qux',
+      },
+      {
+        foo: 'foo',
+        bar: 'bar',
+        baz: 'baz',
+      }
+    ),
+    [[['foo', 'bar'], ['qux']], [['bar']]]
+  )
+})
