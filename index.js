@@ -5,7 +5,7 @@
  * @returns {boolean}
  */
 function isObj(obj) {
-  return obj === Object(obj)
+  return obj === Object(obj) && !Array.isArray(obj)
 }
 
 /**
@@ -31,7 +31,7 @@ function deepValue(obj, path) {
  * @param {object} investegated
  * @param {array} res
  * @param {array} path
- * @returns {*}
+ * @returns {array}
  */
 function seekDiffs(iterated, investegated, res, path) {
   Object.keys(iterated).forEach((key) => {
@@ -52,7 +52,7 @@ function seekDiffs(iterated, investegated, res, path) {
  *
  * @param firstObj
  * @param secondObj
- * @returns {*[]}
+ * @returns {array}
  */
 function keysDiff(firstObj, secondObj) {
   if (!isObj(firstObj) || !isObj(secondObj)) {

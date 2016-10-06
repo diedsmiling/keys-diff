@@ -33,3 +33,8 @@ test('Should throw error if string is passed as argument', () => {
   assertError({}, 'bar')
 })
 
+test('Should throw error if array is passed as argument', () => {
+  assertError(['foo'], ['bar'])
+  assertError(['foo'], {})
+  assertError({}, ['bar'])
+})
