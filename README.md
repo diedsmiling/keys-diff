@@ -3,7 +3,7 @@
 
 **keys-diff** is a javascript/node.js module that provides a tool for finding the difference between the keys of two objects. 
 
-**NOTE**: This module verifies just the identity of the objects keys, not the whole structure. For full investigation, you can use modules like [deep-diff] (https://github.com/flitbit/diff).
+**NOTE**: This module verifies just the identity of the objects keys, not the whole structure. For full investigation, you can use modules like [deep-diff][deep-diff].
 ## Install
 ```bash
 $ npm install keys-diff
@@ -51,3 +51,4 @@ I needed a similar tool when I came across an issue, where I needed to track the
 
 [travis-image]: https://travis-ci.org/diedsmiling/keys-diff.svg?branch=master
 [travis-url]: https://travis-ci.org/diedsmiling/keys-diff
+[deep-diff]: https://github.com/flitbit/diff
