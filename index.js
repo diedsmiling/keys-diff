@@ -31,16 +31,18 @@ function deepValue(obj, path) {
  * @param {object} investegated
  * @param {array} res
  * @param {array} path
+ * @param {boolean} isRoot
  * @returns {array}
  */
-function seekDiffs(iterated, investegated, res, path) {
+function seekDiffs(iterated, investegated, res, path, isRoot) {
   Object.keys(iterated).forEach((key) => {
+    if (isRoot) path.length = 0 // eslint-disable-line
     if (!isObj(iterated[key])) {
       const propPath = path.concat(key)
       if (!deepValue(investegated, propPath)) res.push(propPath)
     } else {
       path.push(key)
-      return seekDiffs(iterated[key], investegated, res, path)
+      return seekDiffs(iterated[key], investegated, res, path, false)
     }
     return true
   })
@@ -59,8 +61,8 @@ function keysDiff(firstObj, secondObj) {
     throw Error('Both arguments should be objects!')
   }
   return [
-    seekDiffs(firstObj, secondObj, [], []),
-    seekDiffs(secondObj, firstObj, [], []),
+    seekDiffs(firstObj, secondObj, [], [], true),
+    seekDiffs(secondObj, firstObj, [], [], true),
   ]
 }
 
