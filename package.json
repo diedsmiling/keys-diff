@@ -19,7 +19,10 @@
   "keywords": [
     "objects",
     "difference",
-    "keys"
+    "diff",
+    "keys",
+    "change-tracking",
+    "compare"
   ],
   "author": "Lazarev Alexandr <diedsmiling@gmail.com>",
   "license": "ISC",
