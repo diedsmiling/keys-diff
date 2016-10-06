@@ -4,7 +4,13 @@
   "description": "Finds difference between the kyes of two objects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava",
+    "test:dev": "ava --watch"
+  },
+  "ava": {
+    "files": [
+      "./tests/**/*.spec.js"
+    ]
   },
   "repository": {
     "type": "git",
@@ -22,6 +28,7 @@
   },
   "homepage": "https://github.com/diedsmiling/keys-diff#readme",
   "devDependencies": {
+    "ava": "^0.16.0",
     "babel-eslint": "^7.0.0",
     "eslint": "^3.7.1",
     "eslint-config-airbnb": "^12.0.0",
