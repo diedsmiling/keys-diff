@@ -1,5 +1,9 @@
 # keys-diff
-Finds difference between the kyes of two objects. 
+[![Build Status][travis-image]][travis-url]
+
+**keys-diff** is a javascript/node.js module that provides a tool for finding the difference between the keys of two objects. 
+
+**NOTE**: This module verifies just the identity of the objects keys, not the whole structure. For full investigation, you can use modules like [deep-diff] (https://github.com/flitbit/diff).
 ## Install
 ```bash
 $ npm install keys-diff
@@ -44,3 +48,6 @@ keysDiff(foo, bar);
 
 ##Use cases
 I needed a similar tool when I came across an issue, where I needed to track the difference between two JSON files with l18n data from different branches. Could also be used to see the difference in API response structure, schemas and so on.
+
+[travis-image]: https://travis-ci.org/diedsmiling/keys-diff.svg?branch=master
+[travis-url]: https://travis-ci.org/diedsmiling/keys-diff
