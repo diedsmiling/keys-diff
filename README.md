@@ -2,7 +2,7 @@
 Finds difference between the kyes of two objects. 
 ## Install
 ```bash
-$ npm install keys-diff```
+$ npm install keys-diff
 ```
 
 ##Usage
