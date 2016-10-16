@@ -5,10 +5,15 @@
 
 **NOTE**: This module verifies just the identity of the objects keys, not the whole structure. For full investigation, you can use modules like [deep-diff][deep-diff].
 ## Install
+Using npm:
 ```bash
 $ npm install keys-diff
 ```
-
+Or using yarn:
+```bash
+yarn add keys-diff
+yarn
+```
 ##Usage
 
 ```js
