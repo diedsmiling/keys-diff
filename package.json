@@ -1,6 +1,6 @@
 {
   "name": "keys-diff",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Finds difference between the kyes of two objects",
   "main": "index.js",
   "scripts": {
