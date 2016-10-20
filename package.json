@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "ava",
-    "test:dev": "ava --watch --verbose"
+    "test:dev": "ava --watch --verbose",
+    "report": "./node_modules/nyc/bin/nyc.js report --reporter=html npm run test",
+    "cover": "./node_modules/nyc/bin/nyc.js npm run test",
+    "codecov": "npm run cover && ./node_modules/nyc/bin/nyc.js report --reporter=lcov npm run test > coverage.lcov && ./node_modules/codecov/bin/codecov  -t 371dbb94-5efa-457d-a887-02675ff4032e"
   },
   "ava": {
     "files": [
@@ -37,6 +40,10 @@
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.2",
-    "eslint-plugin-react": "^6.3.0"
+    "eslint-plugin-react": "^6.3.0",
+    "nyc": "^8.3.2"
+  },
+  "dependencies": {
+    "codecov": "^1.0.1"
   }
 }
