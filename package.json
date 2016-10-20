@@ -36,14 +36,12 @@
   "devDependencies": {
     "ava": "^0.16.0",
     "babel-eslint": "^7.0.0",
+    "codecov.io": "^0.1.6",
     "eslint": "^3.7.1",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.3.0",
     "nyc": "^8.3.2"
-  },
-  "dependencies": {
-    "codecov": "^1.0.1"
   }
 }
