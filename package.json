@@ -8,7 +8,7 @@
     "test:dev": "ava --watch --verbose",
     "report": "./node_modules/nyc/bin/nyc.js report --reporter=html npm run test",
     "cover": "./node_modules/nyc/bin/nyc.js npm run test",
-    "codecov": "npm run cover && ./node_modules/nyc/bin/nyc.js report --reporter=lcov npm run test > coverage.lcov && ./node_modules/codecov/bin/codecov  -t 371dbb94-5efa-457d-a887-02675ff4032e"
+    "codecov": "npm run cover && ./node_modules/nyc/bin/nyc.js report --reporter=lcov npm run test > coverage.lcov && ./node_modules/codecov/bin/codecov"
   },
   "ava": {
     "files": [
