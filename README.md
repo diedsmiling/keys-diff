@@ -1,5 +1,6 @@
 # keys-diff
-[![Build Status][travis-image]][travis-url]
+[![Build Status][travis-image]][travis-url] [![codecov](https://codecov.io/gh/diedsmiling/keys-diff/branch/master/graph/badge.svg)](https://codecov.io/gh/diedsmiling/keys-diff)
+
 
 **keys-diff** is a javascript/node.js module that provides a tool for finding the difference between the keys of two objects. 
 
