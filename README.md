@@ -15,7 +15,7 @@ Or using yarn:
 yarn add keys-diff
 yarn
 ```
-##Usage
+## Usage
 
 ```js
 import keysDiff from 'keys-diff'
