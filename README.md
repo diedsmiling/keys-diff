@@ -13,7 +13,6 @@ $ npm install keys-diff
 Or using yarn:
 ```bash
 yarn add keys-diff
-yarn
 ```
 ## Usage
 
