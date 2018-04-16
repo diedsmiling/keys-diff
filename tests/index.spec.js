@@ -74,3 +74,17 @@ test('Should find difference in a nested object', (t) => {
     [[['foo', 'bar'], ['qux']], [['bar']]]
   )
 })
+
+test('should consider keys with empty values', (t) => {
+  const a = {
+    foo: 'bar',
+    baz: 'qux',
+  }
+
+  const b = {
+    foo: 'bar',
+    baz: '',
+  }
+
+  t.deepEqual(keysDiff(a, b), [[], []])
+})
