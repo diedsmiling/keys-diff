@@ -1,5 +1,6 @@
 # keys-diff
-[![Build Status][travis-image]][travis-url]
+[![Build Status][travis-image]][travis-url] [![codecov](https://codecov.io/gh/diedsmiling/keys-diff/branch/master/graph/badge.svg)](https://codecov.io/gh/diedsmiling/keys-diff)
+
 
 **keys-diff** is a javascript/node.js module that provides a tool for finding the difference between the keys of two objects. 
 
@@ -12,9 +13,8 @@ $ npm install keys-diff
 Or using yarn:
 ```bash
 yarn add keys-diff
-yarn
 ```
-##Usage
+## Usage
 
 ```js
 import keysDiff from 'keys-diff'
@@ -49,9 +49,9 @@ keysDiff(foo, bar);
 */
 ```
 
-**NOTE:** The function receives two objects as the arguments and returns a multidimensional array. The first item of the returned array includes all the keys (in a form of array describing the full path in depth), from the first object, that are not included the second object. In its turn, the second item of the returned array includes all the keys from the second object that are not included in the first one. 
+**NOTE:** The function receives two objects as arguments and returns a multidimensional array. The first item of the returned array includes all the keys (in a form of array describing the full path in depth), from the first object, that are not included the second object. In its turn, the second item of the returned array includes all the keys from the second object that are not included in the first one. 
 
-##Use cases
+## Use cases
 I needed a similar tool when I came across an issue, where I needed to track the difference between two JSON files with l18n data from different branches. Could also be used to see the difference in API response structure, schemas and so on.
 
 [travis-image]: https://travis-ci.org/diedsmiling/keys-diff.svg?branch=master
