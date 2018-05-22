@@ -4,6 +4,7 @@
     "linebreak-style": 0,
     "semi" : [2, "never"],
     "arrow-parens": 0,
-    "strict": 0
+    "strict": 0,
+    "prefer-arrow-callback": 0
   }
 }

@@ -20,7 +20,7 @@ function isObj(obj) {
  * @returns {array}
  */
 function seekDiffs(iterated, investigated, res, path) {
-  Object.keys(iterated).forEach((key) => {
+  Object.keys(iterated).forEach(function (key) {
     const propPath = path.concat(key)
     if (!isObj(iterated[key])) {
       if (!Object.prototype.hasOwnProperty.call(investigated, propPath)) res.push(propPath)
