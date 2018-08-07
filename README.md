@@ -49,7 +49,7 @@ keysDiff(foo, bar);
 */
 ```
 
-**NOTE:** The function receives two objects as arguments and returns a multidimensional array. The first item of the returned array includes all the keys (in a form of array describing the full path in depth), from the first object, that are not included the second object. In its turn, the second item of the returned array includes all the keys from the second object that are not included in the first one. 
+**NOTE:** Function receives two objects as arguments and returns a multidimensional array. First element of the returned array includes all the keys (in a form of array describing the full path in depth) from the first object that are not included the second object. In its turn, second element of the returned array includes all the keys from the second object that are not included in the first one. 
 
 ## Use cases
 I needed a similar tool when I came across an issue, where I needed to track the difference between two JSON files with l18n data from different branches. Could also be used to see the difference in API response structure, schemas and so on.
