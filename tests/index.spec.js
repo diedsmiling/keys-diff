@@ -45,6 +45,25 @@ test('Should return empty arrays on empty objects', (t) => {
 
 test('Should return empty arrays when objects keys are equal', (t) => {
   t.deepEqual(keysDiff({ foo: 'bar' }, { foo: 'baz' }), [[], []])
+  const foo = {
+    foo: 'foo',
+    bar: {
+      baz: 'baz',
+      quux: 'quux',
+    },
+    corge: 'corge',
+  }
+
+  const bar = {
+    foo: 'foo',
+    bar: {
+      baz: 'baz',
+      quux: 'quux',
+    },
+    corge: 'corge',
+  }
+
+  t.deepEqual(keysDiff(foo, bar), [[], []])
 })
 
 test('Should return empty arrays when object keys are equal but their order is different', (t) => {

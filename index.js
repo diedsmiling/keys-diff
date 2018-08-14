@@ -11,6 +11,23 @@ function isObj(obj) {
 }
 
 /**
+ * Get deep value from the object by passing path
+ *
+ * @param {object} obj
+ * @param {array} path
+ * @returns {*}
+ */
+function deepValue(obj, path) {
+  let clonedObj = obj
+  path.every(function (val) {
+    const res = Object.prototype.hasOwnProperty.call(clonedObj, val)
+    clonedObj = clonedObj[val]
+    return res
+  })
+  return clonedObj
+}
+
+/**
  * Recursive function to detect differences
  *
  * @param {object} iterated
@@ -23,7 +40,8 @@ function seekDiffs(iterated, investigated, res, path) {
   Object.keys(iterated).forEach(function (key) {
     const propPath = path.concat(key)
     if (!isObj(iterated[key])) {
-      if (!Object.prototype.hasOwnProperty.call(investigated, propPath)) res.push(propPath)
+      const deepValueSearch = deepValue(investigated, propPath)
+      if (typeof deepValueSearch === 'undefined') res.push(propPath)
     } else {
       return seekDiffs(iterated[key], investigated, res, propPath)
     }
