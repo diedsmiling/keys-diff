@@ -21,7 +21,9 @@ function deepValue(obj, path) {
   let clonedObj = obj
   path.every(function (val) {
     const res = Object.prototype.hasOwnProperty.call(clonedObj, val)
-    clonedObj = clonedObj[val]
+    if (clonedObj[val] !== null) {
+      clonedObj = clonedObj[val]
+    }
     return res
   })
   return clonedObj

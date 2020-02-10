@@ -107,3 +107,21 @@ test('should consider keys with empty values', (t) => {
 
   t.deepEqual(keysDiff(a, b), [[], []])
 })
+
+test('Should handle null values', (t) => {
+  const foo = {
+    foo: 'foo',
+    bar: {
+      baz: 'baz',
+      qux: 'qux',
+    },
+  }
+
+  const bar = {
+    foo: 'foo',
+    bar: null,
+    corge: 'corge',
+  }
+
+  t.deepEqual(keysDiff(foo, bar), [[['bar', 'baz'], ['bar', 'qux']], [['corge']]])
+})
